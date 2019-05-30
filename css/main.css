@@ -105,3 +105,20 @@ main {
     filter: grayscale(0%);
     cursor: pointer;
 }
+
+/* REVIEWS */
+.section-reviews {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 65%;
+    padding: 6.5rem;
+}
+
+.review {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 5% 0;
+}
