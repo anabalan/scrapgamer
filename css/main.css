@@ -239,3 +239,73 @@ input:focus {
     background-color: #131414;
     color: #fff;
 }
+
+/* Responsivo */
+
+@media (max-width:823px) {
+    .section-reviews {
+        width: 100%;
+    }
+    
+    .section-top {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .game-top {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 33.3%;
+        margin-top: 5%;
+    }
+    
+    .logo {
+        width: 90%;
+    }
+    
+}
+
+@media (max-width:585px) {
+    .img-game-small {
+        width: 50%;
+    }
+    
+    .img-game-big {
+        width: 100%;
+    }
+    
+    .game-top {
+        width: 100%;
+    }
+    
+    .logo {
+        width: 100%;
+    }
+    
+}
+
+@media (min-width:1531px) {
+    .img-game {
+        height: 130px;
+    }
+}
+
+@media (min-width:1630px) {
+    .img-game {
+        height: 145px;
+    }
+}
+
+@media (min-width:1965px) {
+    .img-game {
+        height: 180px;
+    }
+}
+
+@media (min-width:2117px) {
+    .img-game {
+        height: 200px;
+    }
+}
