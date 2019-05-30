@@ -146,3 +146,44 @@ main {
     cursor: pointer;
     filter: grayscale(0%);
 }
+
+/* TOP 5 */
+.section-top {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 35%;
+    padding: 6.5rem;
+}
+
+.game-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.img-game {
+    width: 30%;
+    height: 120px;
+    background-image: url(../img/top/top10.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+}
+
+.description-game {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 3rem;
+}
+
+.description-game p {
+    width: auto;
+    background-color: #D7E9EC;
+    padding: 0.5rem;
+    border-radius: 2px;
+}
