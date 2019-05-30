@@ -52,3 +52,11 @@ header {
     padding: 2.5rem;
     background-color: #141414;
 }
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #F2F2F2;
+}
