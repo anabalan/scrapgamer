@@ -93,3 +93,15 @@ main {
     width: 50%;
     height: auto;
 }
+
+.img-game-small img, .img-game-big img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(40%);
+    max-width: 100%;
+}
+
+.img-game-small img:hover, .img-game-big img:hover {
+    filter: grayscale(0%);
+    cursor: pointer;
+}
