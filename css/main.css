@@ -122,3 +122,13 @@ main {
     width: 100%;
     margin: 5% 0;
 }
+
+.img-review {
+    width: 30%;
+    height: 200px;
+    background-image: url(../img/banner/thewitcher3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    filter: grayscale(40%);
+}
