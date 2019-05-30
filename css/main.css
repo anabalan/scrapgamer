@@ -11,3 +11,28 @@
     font-size: 62.5%;
     font-weight: 400;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 150%;
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: #303030;
+    width: 100%;
+}
+
+p {
+    font-size: 1.3rem;
+    color: #7A7878;
+    width: 100%;
+}
+
+#title {
+    width: 40%;
+    background-color: #303030;
+    height: 3px;
+}
