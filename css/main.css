@@ -132,3 +132,17 @@ main {
     background-size: 100% auto;
     filter: grayscale(40%);
 }
+
+.description-review {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 3rem;
+}
+
+.review :hover {
+    color: #1B3B71;
+    cursor: pointer;
+    filter: grayscale(0%);
+}
