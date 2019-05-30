@@ -60,3 +60,17 @@ main {
     width: 100%;
     background-color: #F2F2F2;
 }
+
+
+/* LOGO */
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding: 1rem;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
