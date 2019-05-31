@@ -160,3 +160,10 @@ function site3() {
 $("#site3").on("click",function(){
    site3()
 });
+
+// Iniciar com o conteúdo do primeiro site pra dar um tchan
+$(document).ready(function(){
+    var primeiroSite="https://www.theenemy.com.br/";
+    site1(primeiroSite);
+    func1Executada = true;
+});
