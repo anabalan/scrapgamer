@@ -167,3 +167,42 @@ $(document).ready(function(){
     site1(primeiroSite);
     func1Executada = true;
 });
+
+
+// fazendo o "filtro"
+var func1Executada = false;
+var func2Executada = false;
+var func3Executada = false;
+
+Array.from($(".search").children('button')).forEach(function(element) {
+    element.addEventListener("click", function(evt) {
+        var valorTab = $(this).attr('id');
+
+
+        if(valorTab === 'site1'){
+            if($('.section-reviews').children().length > 0){
+                var reviews = $('.section-reviews').children();
+                $(reviews, '.hr').remove()
+                func1Executada = true;
+                if(func1Executada){
+                    return false;
+                }
+                site1();
+            }else{
+                return false;
+            }
+        } else if(valorTab === 'site2'){
+            if($('.section-reviews').children().length > 0){
+                var reviews = $('.section-reviews').children();
+                $(reviews, '.hr').remove()
+                func2Executada = true;
+                if(func2Executada){
+                    return false;
+                }
+                site2();
+            }else{
+                return false;
+            }
+        }    
+    })
+});
