@@ -206,3 +206,11 @@ Array.from($(".search").children('button')).forEach(function(element) {
         }    
     })
 });
+
+//Efeito no botão ativo
+// $(document).ready(function(){
+//     $("button").click(function(){
+//         $("button").removeClass("fundo-btn");
+//         $(this).css({color:"#FFF", backgroundColor: "#000" });
+//     });
+// })
