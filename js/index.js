@@ -56,3 +56,54 @@ function site1() {
 $("#site1").on("click",function(){
    site1()
 });
+
+
+// função para pegar o conteúdo do site 2 - Voxel
+function site2() {
+    $.ajax({
+        // requisição para o site
+        url: `${link}${"https://www.voxel.com.br/"}`,
+        type: 'get',
+        dataType: "html",
+        error: function(err) {
+            console.log(err)
+        },
+        success: function(data) {
+            // tornando o conteúdo legível
+            var parser = new DOMParser();
+            var documento = parser.parseFromString(data, "text/html");
+
+            // selecionando a div que contém a notícia
+            var noticias = documento.body.querySelectorAll('.home-vertical-news-item');
+            
+            // console.log(noticias);
+            
+            // loop por cada div de notícia existente nessa birosca de site
+            noticias.forEach(function(tagHtml) {
+                //  Raspagem com js purinho
+                let imagens = $(tagHtml).children().children('.home-vertical-news-img .lazyloaded').attr('src');
+                // Jogando o conteúdo nas variáveis
+                let titulo = $(tagHtml).children().children().children('.home-vertical-news-title').text();
+            
+            // jogando o conteúdo nas divs
+            let divreview = `
+            <div class="review">
+            <div class="img-review" style="background-image: url(https://${imagens});"></div>
+            <div class="description-review">
+                <h3>${titulo}</h3>
+                <p>PLATAFORMAS</p>
+            </div>
+            </div>
+            <hr/>
+              `;
+                $('.section-reviews').append(divreview)
+            });
+        }
+
+
+    });
+}
+
+$("#site2").on("click",function(){
+   site2()
+});
