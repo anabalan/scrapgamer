@@ -107,3 +107,56 @@ function site2() {
 $("#site2").on("click",function(){
    site2()
 });
+
+// função para pegar o conteúdo do site 3
+function site3() {
+    $.ajax({
+        // requisição para o site
+        url: `${link}${"https://www.futurebehind.com/category/analises/"}`,
+        type: 'get',
+        dataType: "html",
+        error: function(err) {
+            console.log(err)
+        },
+        success: function(data) {
+            // tornando o conteúdo legível
+            var parser = new DOMParser();
+            var documento = parser.parseFromString(data, "text/html");
+
+            // selecionando a div que contém a notícia
+            var noticias = documento.body.querySelectorAll('.list-item');
+
+            // console.log(noticias);
+
+            // loop por cada div de notícia existente nessa birosca de site
+            noticias.forEach(function(tagHtml) {
+                //  Raspagem com js purinho
+                let imagens = $(tagHtml).children('').children().attr('src');
+                // tirando o // da url da imagem "tentativa falha"
+                let imgLimpa = toString(imagens).slice(-2, 0);
+                // Jogando o conteúdo nas variáveis
+                let titulo = $(tagHtml).children().children().children('.cb-post-title').text();
+                let descricao = $(tagHtml).children().children().children('.cb-excerpt').text();
+
+            let divreview = `
+            <div class="review">
+            <div class="img-review"></div style="background-image: url(../img/banner/thewitcher3.png);">
+            <div class="description-review">
+                <h3>${titulo}</h3>
+                <p>${descricao}</p>
+            </div>
+            </div>
+            <hr/>
+              `;
+            //   console.log(divreview);
+                $('.section-reviews').append(divreview)
+            });
+        }
+
+
+    });
+}
+
+$("#site3").on("click",function(){
+   site3()
+});
